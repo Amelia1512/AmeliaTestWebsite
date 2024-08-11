@@ -1,10 +1,10 @@
 import '@/app/styles.css';
-import Header from '@/app/components/header';
+import PageTitle from '@/app/components/page-title';
 
 export default function Home() {      
   return (
     <div>
-      <Header title="Home" />
+      <PageTitle title="Home" />
       <p>Welcome to Amelia's test site!</p>
     </div>
   );
