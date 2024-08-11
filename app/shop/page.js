@@ -9,7 +9,6 @@ export default function Page() {
       <Header title="Shop" />
         <div className="product-list">
                 {products.map((product) => {
-                    console.log(`My product is ${product.name}`);
                     return (<ProductCard {...product} />)
                 })}
         </div>

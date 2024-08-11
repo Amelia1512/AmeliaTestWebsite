@@ -2,8 +2,6 @@ import './product-card.css';
 
 const ProductCard = (props) => {
     const { image, name, price } = props;
-    console.log(props);
-    console.log(name);
 
 
   return (
