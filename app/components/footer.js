@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <p>Amelia's Test Site 2024</p>;
+  return <p className="footer">Amelia's Test Site 2024</p>;
 }

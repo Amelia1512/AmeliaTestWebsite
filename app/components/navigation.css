@@ -14,11 +14,11 @@
     padding: 10px 20px;
     color: rgb(6, 84, 80);
     text-decoration: none;
-    border-right: 1px solid #444; 
+
 }
 
 .nav-item a:hover {
-    background-color: rgb(194, 192, 189);
+    text-shadow: 0.4px 0.4px;
 }
 
 
