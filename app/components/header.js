@@ -7,6 +7,7 @@ export default function Header() {
             <div className='logo-bar'>
                 <Image className='logo' src='/cj-logo.svg' width={100} height={100}/>
                     <p className='header-text'>Amelia's Test Site</p>
+                    <div className='empty-logo'></div>
             </div>
             <div className='nav-bar'>
                 <Navigation />
