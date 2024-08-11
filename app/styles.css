@@ -32,7 +32,7 @@
   .nav-bar {
     border-top: 1px solid #edecec;
     padding-top: 7.5px;
-    padding-bottom: 7.5px;
+    /* padding-bottom: 7.5px; */
     padding-left: 45px;
   }
 }

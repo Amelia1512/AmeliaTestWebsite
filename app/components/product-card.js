@@ -8,14 +8,14 @@ const ProductCard = (props) => {
 
 
   return (
-    <div className="product-card-container" key={id}>
+    <div className="product-card-container">
         <a className="product-card">
           <dev className="product-card__image-container">
             <Image 
               className="product-card__image" 
               src={image} 
-              height={300}
-              width={390}
+              height={330}
+              width={405}
             />
           </dev>
         <p className="product-card__price">{price}</p>
