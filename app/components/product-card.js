@@ -9,7 +9,7 @@ const ProductCard = (props) => {
   return (
     <div className="product-card-container">
         <a className="product-card">
-          <dev className="product-card__image-container">
+          <div className="product-card__image-container">
             <Image 
               className="product-card__image" 
               src={image} 
@@ -17,7 +17,7 @@ const ProductCard = (props) => {
               width={405}
               alt={name}
             />
-          </dev>
+          </div>
         <p className="product-card__price">{price}</p>
         <p className="product-card__name">{name}</p>
         <div className='product-button-container'>
