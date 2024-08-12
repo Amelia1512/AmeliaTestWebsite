@@ -6,7 +6,6 @@ import Image from 'next/image';
 const ProductCard = (props) => {
     const { image, name, price, id } = props;
 
-
   return (
     <div className="product-card-container">
         <a className="product-card">
@@ -16,6 +15,7 @@ const ProductCard = (props) => {
               src={image} 
               height={330}
               width={405}
+              alt={name}
             />
           </dev>
         <p className="product-card__price">{price}</p>

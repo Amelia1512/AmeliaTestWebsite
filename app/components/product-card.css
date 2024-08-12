@@ -32,6 +32,8 @@
     max-width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
+    width:auto;
+    height: auto;
   }
   
   .product-card__price {
