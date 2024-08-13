@@ -27,7 +27,8 @@ const ProductCard = (props) => {
           <button className='product-card__button' onClick={() => context.addItemToCart({
             id: id,
             itemPrice: price,
-            itemName: name
+            itemName: name,
+            itemImage: image
           })}>Add to cart</button>
         </div>
         </a>
