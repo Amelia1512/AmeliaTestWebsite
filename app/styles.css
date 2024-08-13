@@ -37,12 +37,15 @@
   }
 }
 
+.welcome-text {
+  text-align: center;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: rgb(233, 246, 243);
     align-items: center;
-    text-align: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

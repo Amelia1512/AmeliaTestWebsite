@@ -9,20 +9,51 @@ export const CartContext = React.createContext({
     // checkoutShown: Boolean,
     addItemToCart: (item) => {},
     // getCartTotal: () => {},
+    incrementItem: (id) => {},
+    decrementItem: (id) => {}
 }) 
 
 export const CartContextProvider = (props) => {
     const addItemToCart = (item) => {
-        var currentItems = state.cartItems
-        currentItems.push(item)
+        var currentItems = state.cartItems;
+        var itemToFind = currentItems.find((foundItem) => 
+            foundItem.id === item.id
+        )
+        console.log(itemToFind);
+        if(itemToFind === undefined) {
+            currentItems.push({
+                ...item, 
+                quantity: 1
+            })
+        }
+        else {
+            itemToFind.quantity = itemToFind.quantity + 1;  
+        }
         setState({
             ...state, 
             cartItems: currentItems
         })
+        console.log(state.cartItems);
     }
+
+    const incrementItem = (id) => {
+        var currentItems = state.cartItems;
+        var itemToFind = currentItems.find((foundItem) => 
+            foundItem.id === id
+        )
+        itemToFind.quantity = itemToFind.quantity + 1;
+        setState({
+            ...state, 
+            cartItems: currentItems
+        })
+        console.log(state.cartItems)
+    }
+
+
     const initState = {
         cartItems: [],
-        addItemToCart: addItemToCart
+        addItemToCart: addItemToCart,
+        incrementItem: incrementItem
     }
     const [state, setState] = useState(initState);
 
