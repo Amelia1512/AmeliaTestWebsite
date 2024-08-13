@@ -1,10 +1,13 @@
 'use client'
 
+import { useContext } from 'react';
 import './product-card.css';
 import Image from 'next/image';
+import { CartContext } from '../state/contexts';
 
 const ProductCard = (props) => {
     const { image, name, price, id } = props;
+    const context = useContext(CartContext);
 
   return (
     <div className="product-card-container">
@@ -21,7 +24,11 @@ const ProductCard = (props) => {
         <p className="product-card__price">{price}</p>
         <p className="product-card__name">{name}</p>
         <div className='product-button-container'>
-          <button className='product-card__button' onClick={() => {console.log(name)}}>Add to cart</button>
+          <button className='product-card__button' onClick={() => context.addItemToCart({
+            id: id,
+            itemPrice: price,
+            itemName: name
+          })}>Add to cart</button>
         </div>
         </a>
 

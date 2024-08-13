@@ -3,6 +3,7 @@ import "@/app/styles.css";
 import Footer from '@/app/components/footer';
 import Navigation from "@/app/components/navigation";
 import Header from "@/app/components/header";
+import { CartContextProvider } from "./state/contexts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,11 +16,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <div className="content">
-          {children}
-        </div>
-        <Footer />
+        <CartContextProvider>
+          <Header />
+          <div className="content">
+            {children}
+          </div>
+          <Footer />
+        </CartContextProvider>
       </body>
     </html>
   );
