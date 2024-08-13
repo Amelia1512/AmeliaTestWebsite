@@ -49,11 +49,23 @@ export const CartContextProvider = (props) => {
         console.log(state.cartItems)
     }
 
+    const decrementItem = (id) => {
+        var currentItems = state.cartItems;
+        var itemToFind = currentItems.find((foundItem) => 
+            foundItem.id === id
+        )
+        itemToFind.quantity = itemToFind.quantity - 1;
+        setState({
+            ...state, 
+            cartItems: currentItems
+        })
+    }
 
     const initState = {
         cartItems: [],
         addItemToCart: addItemToCart,
-        incrementItem: incrementItem
+        incrementItem: incrementItem,
+        decrementItem: decrementItem
     }
     const [state, setState] = useState(initState);
 

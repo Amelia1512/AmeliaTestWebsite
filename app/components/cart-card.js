@@ -3,13 +3,17 @@ import './cart-card.css'
 import { useContext } from 'react';
 import { CartContext } from '../state/contexts';
 
-const CartCard = (props) => {
-    const { itemImage, itemName, itemPrice, id } = props; 
+function GetItemQuantity(id) {
     const context = useContext(CartContext);
     var itemToFind = context.cartItems.find((foundItem) => 
         foundItem.id === id
     )
-    itemToFind.quantity = itemToFind.quantity + 1;
+    return(itemToFind.quantity); 
+}
+
+const CartCard = (props) => {
+    const { itemImage, itemName, itemPrice, id } = props; 
+    const context = useContext(CartContext);
 
     return(
         <div className='cart-card-container'>
@@ -27,7 +31,7 @@ const CartCard = (props) => {
             <div className='cart-card-buttons'>
                 <button className='cart-card__minus-button' onClick={() => context.decrementItem(id)}>-</button>
                 <div className='button-space'>
-                    <p>{itemToFind.quantity}</p>    
+                    <p>{GetItemQuantity(id)}</p>    
                 </div>
                 <button className='cart-card__add-button' onClick={() => context.incrementItem(id)}>+</button>
             </div>
