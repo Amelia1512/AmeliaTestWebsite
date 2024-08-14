@@ -11,8 +11,12 @@ export default function Page() {
   return (
     <div className="cart-container">
       <div className="cart-container-header">
-        <p>In your cart:</p>
-        <p>Subtotal: £{context.getCartTotal()}</p>
+        <div className="cart-container-in-your-cart">
+          <p>In your cart:</p>
+        </div>
+        <div className="cart-container-subtotal">
+          <p>Subtotal: £{context.getCartTotal()}</p>
+        </div>
       </div>
       <div className="cart-container-productInfo">
         {context.cartItems.map((cartItem) => {

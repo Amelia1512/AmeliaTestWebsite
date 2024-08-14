@@ -26,7 +26,7 @@ const CartCard = (props) => {
             />
             <div className="cart-card__name-and-price">
                 <p>{itemName}</p>
-                <p>{itemPrice}</p>
+                <p>£{itemPrice}</p>
             </div>
             <div className='cart-card-buttons'>
                 <button className='cart-card__minus-button' onClick={() => context.decrementItem(id)}>-</button>

@@ -9,10 +9,23 @@
 .cart-container-header {
     display: flex;
     flex-direction: row;
-    padding-left: 20px;
     font-size: 25px;
     font-weight: bold;
     border-bottom: 1px solid #edecec;
+    padding-left: 20px;
+}
+
+.cart-container-in-your-cart {
+    display: flex;
+}
+
+.cart-container-subtotal {
+    display: flex;
+    justify-content: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    padding-right: 50px;
 }
 
 .cart-container-productInfo {
