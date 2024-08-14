@@ -21,7 +21,7 @@ const ProductCard = (props) => {
               alt={name}
             />
           </div>
-        <p className="product-card__price">{price}</p>
+        <p className="product-card__price">£{price}</p>
         <p className="product-card__name">{name}</p>
         <div className='product-button-container'>
           <button className='product-card__button' onClick={() => context.addItemToCart({
