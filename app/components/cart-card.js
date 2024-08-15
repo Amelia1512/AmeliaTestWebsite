@@ -3,7 +3,7 @@ import './cart-card.css'
 import { useContext } from 'react';
 import { CartContext } from '../state/contexts';
 
-function GetItemQuantity(id) {
+export function GetItemQuantity(id) {
     const context = useContext(CartContext);
     var itemToFind = context.cartItems.find((foundItem) => 
         foundItem.id === id

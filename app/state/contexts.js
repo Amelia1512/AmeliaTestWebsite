@@ -11,7 +11,8 @@ export const CartContext = React.createContext({
     getCartTotal: () => {},
     // removeItem: () => {},
     incrementItem: (id) => {},
-    decrementItem: (id) => {}
+    decrementItem: (id) => {},
+    totalQuantity: () => {}
 }) 
 
 export const CartContextProvider = (props) => {
@@ -73,12 +74,22 @@ export const CartContextProvider = (props) => {
         return(totalPrice.toFixed(2))
     }
 
+    const totalQuantity = () => {
+        var currentItems = state.cartItems;
+        let quantity = 0;
+        for (let i = 0; i < currentItems.length; i++) {
+            quantity += currentItems[i].quantity;
+        }
+        return(quantity)
+      }
+
     const initState = {
         cartItems: [],
         addItemToCart: addItemToCart,
         incrementItem: incrementItem,
         decrementItem: decrementItem,
-        getCartTotal: getCartTotal
+        getCartTotal: getCartTotal,
+        totalQuantity: totalQuantity
     }
     const [state, setState] = useState(initState);
 
